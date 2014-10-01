@@ -15,7 +15,7 @@ namespace BoatClub
             Member member = new Member("Sherief", "19800124-5052", 12345);
 
             member.Name = "Sherief";
-            member.MemberNumber = 12345;
+            member.MemberNumber = 123456;
             member.SocialSecurityNumber = "19800124-5052";
             member.Boats.Add(new Boat(9.0, Boat.BoatType.Motorsailor));
 
