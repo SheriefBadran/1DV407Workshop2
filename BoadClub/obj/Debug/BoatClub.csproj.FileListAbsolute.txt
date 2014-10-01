@@ -13,3 +13,11 @@ c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Deb
 C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\BoadClub.exe.config
 C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\obj\Debug\BoadClub.exe
 C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\obj\Debug\BoadClub.pdb
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\BoadClub.exe
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\BoadClub.pdb
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\MongoDB.Bson.dll
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\MongoDB.Driver.dll
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\MongoDB.Bson.xml
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\MongoDB.Driver.xml
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\Newtonsoft.Json.xml
