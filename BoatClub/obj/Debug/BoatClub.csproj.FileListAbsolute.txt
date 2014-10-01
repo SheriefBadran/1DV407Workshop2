@@ -1,0 +1,12 @@
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\BoadClub.exe.config
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\BoadClub.exe
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\BoadClub.pdb
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\MongoDB.Bson.dll
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\MongoDB.Driver.dll
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\MongoDB.Bson.xml
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\MongoDB.Driver.xml
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\obj\Debug\BoadClub.exe
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\obj\Debug\BoadClub.pdb
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\obj\Debug\BoatClub.csprojResolveAssemblyReference.cache
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\Newtonsoft.Json.dll
+c:\users\sherief\documents\visual studio 2012\Projects\BoadClub\BoadClub\bin\Debug\Newtonsoft.Json.xml
