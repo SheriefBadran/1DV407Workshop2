@@ -52,13 +52,6 @@
   </Class>
   <Struct Name="BoatClub.Model.Boat">
     <Position X="3.25" Y="2.75" Width="1.75" />
-    <NestedTypes>
-      <Enum Name="BoatClub.Model.Boat.BoatType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Model\Boat.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAABAAAABAAAAIQAAAAAAAAA=</HashCode>
       <FileName>Model\Boat.cs</FileName>
@@ -67,7 +60,7 @@
   <Struct Name="BoatClub.Model.Member">
     <Position X="5.75" Y="2.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAgAAAACAAAABAAQAAQAEAACAIQAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAgAAAACAAAABAAQAAQAEAACAIAAAAAAAAAA=</HashCode>
       <FileName>Model\Member.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>

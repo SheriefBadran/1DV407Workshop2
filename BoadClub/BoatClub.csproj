@@ -53,22 +53,24 @@
     <Compile Include="Controller\BoatController.cs" />
     <Compile Include="Controller\MasterController.cs" />
     <Compile Include="Controller\MemberController.cs" />
+    <Compile Include="Controller\MemberListController.cs" />
     <Compile Include="Model\Boat.cs" />
+    <Compile Include="Model\BoatType.cs" />
     <Compile Include="Model\Member.cs" />
     <Compile Include="Model\Repositories\MemberRepository.cs" />
     <Compile Include="Model\Repositories\Repository.cs" />
     <Compile Include="Model\Repositories\Services.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\BoatView.cs" />
+    <Compile Include="View\MemberListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

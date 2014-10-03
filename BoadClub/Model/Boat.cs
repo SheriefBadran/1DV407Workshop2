@@ -13,15 +13,6 @@ namespace BoatClub.Model
         private const string length = "length";
         private const string type = "type";
 
-        public enum BoatType
-        {
-            Sailboat,
-            Motorsailor,
-            Motorboat,
-            Canoe,
-            Other
-        }
-
         public double Length { get; set; }
         public BoatType Type { get; set; }
 

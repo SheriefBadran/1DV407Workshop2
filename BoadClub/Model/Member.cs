@@ -50,7 +50,5 @@ namespace BoatClub.Model
                 {boats, Boats.ConvertAll(boat => boat.ToJson())}
             };
         }
-
-        public JObject JsonBoat { get; set; }
     }
 }

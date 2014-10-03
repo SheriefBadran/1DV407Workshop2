@@ -1,5 +1,7 @@
-﻿using BoatClub.Model;
+﻿using BoatClub.Controller;
+using BoatClub.Model;
 using BoatClub.Model.Repositories;
+using BoatClub.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,23 +14,14 @@ namespace BoatClub
     {
         static void Main(string[] args)
         {
-            Member member = new Member("Sherief", "19800124-5052", 12345);
 
-            member.Name = "Sherief";
-            member.MemberNumber = 12345678;
-            member.SocialSecurityNumber = "19800124-5052";
-            member.Boats.Add(new Boat(9.0, Boat.BoatType.Motorsailor));
+            var memberRepository = new MemberRepository();
 
-            MemberRepository memberRep = new MemberRepository();
-            memberRep.Add(member);
-            
+            var boatView = new BoatView();
+            var memberListView = new MemberListView(boatView);
+            var memberListController = new MemberListController(memberRepository, memberListView);
 
-            //MemberRepository memberRep = new MemberRepository();
-            //var names = memberRep.GetAll().Select(m=>m.Name);
-            //foreach (var name in names)
-            //{
-            //    Console.WriteLine(name);
-            //}
+            memberListController.Run();
         }
     }
 }

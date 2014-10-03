@@ -26,7 +26,7 @@ namespace BoatClub.Model.Repositories
             foreach (var memberBson in _db.GetCollection(collectionName).FindAll())
             {
                 // Parse JSON to object and then cast object to IDictionary.
-                var jsonObject = (JObject)JsonConvert.DeserializeObject(memberBson.ToJson());
+                var jsonObject = (JObject)JsonConvert.DeserializeObject(memberBson.ToJson(jsonSettings));
                 members.Add(new Member(jsonObject));
             }
 
