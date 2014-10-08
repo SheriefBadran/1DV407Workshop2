@@ -12,12 +12,16 @@ namespace BoatClub.Controller
     {
         private MemberRepository _memberRepository;
         private MemberListView _memberListView;
+        private MemberController _memberController;
 
         
-        public MemberListController(MemberRepository memberRepository, MemberListView memberListView) 
+        public MemberListController(MemberRepository memberRepository, 
+                                    MemberListView memberListView, 
+                                    MemberController memberController) 
         {
             _memberRepository = memberRepository;
             _memberListView = memberListView;
+            _memberController = memberController;
         }
         
         public void Run()
@@ -26,6 +30,9 @@ namespace BoatClub.Controller
             var memberList =_memberRepository.GetAll();
             //_memberListView.RenderCompact(memberList);
             _memberListView.RenderDetailed(memberList);
+            var member = _memberListView.GetChosenMember(memberList.ToList());
+
+            _memberController.Run(member);
         }
     }
 }

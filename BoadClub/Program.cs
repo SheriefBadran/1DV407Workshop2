@@ -1,4 +1,5 @@
-﻿using BoatClub.Controller;
+﻿using Autofac;
+using BoatClub.Controller;
 using BoatClub.Model;
 using BoatClub.Model.Repositories;
 using BoatClub.View;
@@ -15,13 +16,28 @@ namespace BoatClub
         static void Main(string[] args)
         {
 
+            var builder = new ContainerBuilder();
+            builder.RegisterType<BoatView>();
+            builder.RegisterType<MemberView>();
+            builder.RegisterType<MemberListView>();
+            builder.RegisterType<MemberController>();
+            builder.RegisterType<MemberListController>();
+            builder.RegisterType<MemberRepository>();
+            builder.RegisterType<MainController>();
+            builder.RegisterType<MainView>();
+            var injector = builder.Build();
+
+            var mainContoller = injector.Resolve<MainController>();
+            mainContoller.Run();
             var memberRepository = new MemberRepository();
 
-            var boatView = new BoatView();
-            var memberListView = new MemberListView(boatView);
-            var memberListController = new MemberListController(memberRepository, memberListView);
-
-            memberListController.Run();
+            //var boatView = new BoatView();
+            //var memberView = new MemberView();
+            //var memberListView = new MemberListView(boatView);
+            //var memberController = new MemberController(memberView);
+            //var memberListController = new MemberListController(memberRepository, memberListView, memberController);
+            
+            //memberListController.Run();
         }
     }
 }

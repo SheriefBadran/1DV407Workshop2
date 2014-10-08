@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
@@ -51,9 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\BoatController.cs" />
-    <Compile Include="Controller\MasterController.cs" />
+    <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\MemberController.cs" />
     <Compile Include="Controller\MemberListController.cs" />
+    <Compile Include="Controller\MemberView.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\BoatType.cs" />
     <Compile Include="Model\Member.cs" />
@@ -63,6 +67,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\BoatView.cs" />
+    <Compile Include="View\MainView.cs" />
     <Compile Include="View\MemberListView.cs" />
   </ItemGroup>
   <ItemGroup>

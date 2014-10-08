@@ -22,3 +22,5 @@ C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\MongoDB.Bson.xml
 C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\MongoDB.Driver.xml
 C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\obj\Debug\BoatClub.csprojResolveAssemblyReference.cache
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\Autofac.dll
+C:\Users\Sherief\Documents\GitHub\BoadClub\BoadClub\bin\Debug\Autofac.xml
