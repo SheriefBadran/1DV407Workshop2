@@ -10,14 +10,14 @@
   <Class Name="BoatClub.Controller.MainController">
     <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAMAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Controller\MainController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoatClub.Controller.MemberController">
     <Position X="3.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAI=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAI=</HashCode>
       <FileName>Controller\MemberController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,7 +32,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEA=</HashCode>
       <FileName>Model\Repositories\MemberRepository.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -56,16 +56,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAEAAAABAAAABAAAAIQAAAAAAAAA=</HashCode>
       <FileName>Model\Boat.cs</FileName>
     </TypeIdentifier>
-  </Struct>
-  <Struct Name="BoatClub.Model.Member">
-    <Position X="5.75" Y="2.75" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAgAAAACAAAABAAQAAQAEAACAIAAAAAAAAAA=</HashCode>
-      <FileName>Model\Member.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Boats" />
-    </ShowAsCollectionAssociation>
   </Struct>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

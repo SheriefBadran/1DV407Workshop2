@@ -10,24 +10,58 @@ using System.Threading.Tasks;
 
 namespace BoatClub.Model
 {
-    struct Member
+    class Member : ICloneable
     {
+        private string _name;
+        private string _socialSecurityNumber;
+
         private const string name = "name";
         private const string memberNumber = "memberNumber";
         private const string socialSecurityNumber = "socialSecurityNumber";
         private const string boats = "boats";
 
-        public string Name { get; set; }
-        public string SocialSecurityNumber { get; set; }
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+
+            set
+            {
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Member name can not be empty."); 
+                }
+
+                _name = value;
+            }
+        }
+
+        public string SocialSecurityNumber 
+        {
+            get
+            {
+                return _socialSecurityNumber;
+            }
+
+            set 
+            {
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Social security number can not be empty.");
+                }
+
+                _socialSecurityNumber = value;
+            } 
+        }
+
         public long MemberNumber { get; set; }
         public List<Boat> Boats { get; set; }
 
-        public Member(string name, string socialSecurityNumber, long memberNumber)
-            : this()
+        public Member()
         {
-            Name = name;
-            SocialSecurityNumber = socialSecurityNumber;
-            MemberNumber = memberNumber;
+            MemberNumber = DateTime.UtcNow.ToFileTime();
             Boats = new List<Boat>();
         }
 
@@ -49,6 +83,12 @@ namespace BoatClub.Model
                 {memberNumber, MemberNumber},
                 {boats, Boats.ConvertAll(boat => boat.ToJson())}
             };
+        }
+
+        public object Clone()
+        {
+
+            return this.MemberwiseClone();
         }
     }
 }

@@ -11,16 +11,32 @@ namespace BoatClub.Controller
     {
 
         private MemberView _memberView;
-
-        public MemberController(MemberView memberView)
+        private MemberAdministerController _memberAdministerController;
+        public MemberController(MemberView memberView, MemberAdministerController memberAdministerController)
         {
             _memberView = memberView;
+            _memberAdministerController = memberAdministerController;
         }
 
         public void Run(Member member)
         {
+            do
+            {
+                _memberView.Render(member);
 
-            _memberView.Render(member);
+                switch (_memberView.GetChosenMenuItem())
+                {
+                    case MemberView.MenuItem.Edit:
+                        _memberAdministerController.Run(member);
+                        break;
+                    case MemberView.MenuItem.Delete:
+                        break;
+                    case MemberView.MenuItem.Return:
+                        return;
+                    default:
+                        throw new NotImplementedException("Menu item not implemented in MemberController.");
+                }
+            } while (true);
         }
     }
 }

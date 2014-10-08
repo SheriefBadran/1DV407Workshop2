@@ -20,11 +20,15 @@ namespace BoatClub.View
 
         public void RenderCompact(IEnumerable<Member> memberList)
         {
+            int count = 0;
             foreach (var member in memberList)
             {
-                Console.WriteLine(member.MemberNumber);
-                Console.WriteLine(member.Name);
-                Console.WriteLine(member.Boats.Count);
+                count++;
+                Console.WriteLine("Member {0}:", count);
+                Console.WriteLine("MemberID: {0}", member.MemberNumber);
+                Console.WriteLine("Name: {0}", member.Name);
+                Console.WriteLine("Boats: {0}", member.Boats.Count);
+                Console.WriteLine();
             }
         }
 
@@ -36,7 +40,10 @@ namespace BoatClub.View
             {
                 count++;
                 Console.WriteLine("Member {0}:", count);
-                Console.WriteLine("{0}({1}): {2}", member.Name, member.SocialSecurityNumber, member.MemberNumber);
+                Console.WriteLine("Name: {0}", member.Name);
+                Console.WriteLine("Social security number: {0}", member.SocialSecurityNumber);
+                Console.WriteLine("Member number: {0}", member.MemberNumber);
+                Console.WriteLine();
 
                 foreach (var boat in member.Boats)
                 {
@@ -53,9 +60,16 @@ namespace BoatClub.View
             var validInput = false;
 
             Console.WriteLine("Enter a number to view corresponding member.");
+            Console.WriteLine("Press R to return.");
             do
             {   
                 input = Console.ReadLine();
+
+                if (input == "r" || input == "R")
+                {
+                    return null;
+                }
+
                 if (int.TryParse(input, out selected))
                 {
                     if (selected <= memberList.Count() || selected > 0)

@@ -7,6 +7,7 @@ using MongoDB.Bson;
 using System.Collections;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using MongoDB.Driver;
 
 namespace BoatClub.Model.Repositories
 {
@@ -14,9 +15,10 @@ namespace BoatClub.Model.Repositories
     {
         const string collectionName = "memberRegister";
 
-        public void Add(Member member) 
+        public void Save(Member member, Member updatedMember) 
         {
-            _db.GetCollection(collectionName).Insert(new BsonDocument(member.ToJson()));
+            var option = new MongoUpdateOptions().Flags = UpdateFlags.Upsert; 
+            _db.GetCollection(collectionName).Update(new QueryDocument(member.ToJson()), new UpdateDocument(updatedMember.ToJson()), option);
         }
 
         public IEnumerable<Member> GetAll()

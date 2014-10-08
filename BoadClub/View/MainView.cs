@@ -12,6 +12,7 @@ namespace BoatClub.View
         {
             CompactList,
             DetailedList,
+            NewMember,
             Quit
         }
 
@@ -31,6 +32,8 @@ namespace BoatClub.View
                         return MenuItem.CompactList;
                     case "2":
                         return MenuItem.DetailedList;
+                    case "3":
+                        return MenuItem.NewMember;
                     case "Q":
                     case "q":
                         return MenuItem.Quit;
@@ -43,10 +46,10 @@ namespace BoatClub.View
 
         public void Render() 
         {
-            Console.WriteLine("Menu");
-            Console.WriteLine("1. View Compact Memberlist.");
-            Console.WriteLine("2. View Detailed Memberlist.");
-            Console.WriteLine("3. Add New Member.");
+            Console.WriteLine("Boat Club Main Menu");
+            Console.WriteLine("1. View compact memberlist.");
+            Console.WriteLine("2. View detailed memberlist.");
+            Console.WriteLine("3. Add new member.");
             Console.WriteLine("Q. Quit");
         }
     }

@@ -55,9 +55,11 @@
   <ItemGroup>
     <Compile Include="Controller\BoatController.cs" />
     <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Controller\MemberAdministerController.cs" />
     <Compile Include="Controller\MemberController.cs" />
     <Compile Include="Controller\MemberListController.cs" />
-    <Compile Include="Controller\MemberView.cs" />
+    <Compile Include="View\MemberAdministerView.cs" />
+    <Compile Include="View\MemberView.cs" />
     <Compile Include="Model\Boat.cs" />
     <Compile Include="Model\BoatType.cs" />
     <Compile Include="Model\Member.cs" />

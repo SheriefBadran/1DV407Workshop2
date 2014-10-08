@@ -24,15 +24,32 @@ namespace BoatClub.Controller
             _memberController = memberController;
         }
         
-        public void Run()
+        public void Run(bool detailed = false)
         {
 
-            var memberList =_memberRepository.GetAll();
-            //_memberListView.RenderCompact(memberList);
-            _memberListView.RenderDetailed(memberList);
-            var member = _memberListView.GetChosenMember(memberList.ToList());
+            while (true)
+            {
+                var memberList = _memberRepository.GetAll();
 
-            _memberController.Run(member);
+                if (detailed)
+                {
+                    _memberListView.RenderDetailed(memberList);
+                }
+                else
+                {
+                    _memberListView.RenderCompact(memberList);
+                }
+                var member = _memberListView.GetChosenMember(memberList.ToList());
+
+                if (member != null)
+                {
+                    _memberController.Run(member);
+                }
+                else 
+                {
+                    return;
+                } 
+            }
         }
     }
 }
