@@ -22,14 +22,31 @@ namespace BoatClub.Controller
 
         public void Run(Member member=null)
         {
+            bool creating = false;
+
             if (member == null)
             {
                 member = new Member();
+                creating = true;
             }
 
             var oldMember = (Member)member.Clone();
-            var updatedMember = _memberAdministerView.AdministerMember(member);
-            _memberRepository.Save(oldMember, updatedMember);
+            _memberAdministerView.AdministerMember(member);
+
+            if (creating)
+            {
+                _memberRepository.Add(member);
+            }
+            else
+            {
+                _memberRepository.Update(oldMember, member);
+            }
+        }
+
+        public void Delete(Member member)
+        {
+
+            _memberRepository.Delete(member);
         }
     }
 }

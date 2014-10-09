@@ -15,10 +15,15 @@ namespace BoatClub.Model.Repositories
     {
         const string collectionName = "memberRegister";
 
-        public void Save(Member member, Member updatedMember) 
+        public void Add(Member member)
         {
-            var option = new MongoUpdateOptions().Flags = UpdateFlags.Upsert; 
-            _db.GetCollection(collectionName).Update(new QueryDocument(member.ToJson()), new UpdateDocument(updatedMember.ToJson()), option);
+            //var option = new MongoUpdateOptions().Flags = UpdateFlags.Upsert;
+            _db.GetCollection(collectionName).Insert(new BsonDocument(member.ToJson()));
+        }
+
+        public void Update(Member member, Member updatedMember) 
+        {
+            _db.GetCollection(collectionName).Update(new QueryDocument(member.ToJson()), new UpdateDocument(updatedMember.ToJson()));
         }
 
         public IEnumerable<Member> GetAll()
@@ -33,6 +38,12 @@ namespace BoatClub.Model.Repositories
             }
 
             return members;
+        }
+
+        internal void Delete(Member member)
+        {
+
+            _db.GetCollection(collectionName).Remove(new QueryDocument(member.ToJson()));
         }
     }
 }

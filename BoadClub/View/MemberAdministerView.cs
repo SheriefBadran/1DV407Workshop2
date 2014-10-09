@@ -10,7 +10,7 @@ namespace BoatClub.View
     class MemberAdministerView
     {
 
-        public Member AdministerMember(Member member)
+        public void AdministerMember(Member member)
         {
 
             string input;
@@ -55,8 +55,6 @@ namespace BoatClub.View
                     Console.WriteLine("You fill in a social security number.");
                 }
             } while (true);
-
-            return member;
         }
 
         public string input { get; set; }

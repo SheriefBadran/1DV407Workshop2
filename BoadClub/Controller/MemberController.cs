@@ -30,7 +30,8 @@ namespace BoatClub.Controller
                         _memberAdministerController.Run(member);
                         break;
                     case MemberView.MenuItem.Delete:
-                        break;
+                        _memberAdministerController.Delete(member);
+                        return;
                     case MemberView.MenuItem.Return:
                         return;
                     default:
