@@ -29,9 +29,8 @@ namespace BoatClub.View
 
         public void Render(Boat boat)
         {
+            Console.WriteLine("     Boat type: {0}, ({1}m)", _boatTypeNames[boat.Type], boat.Length);
 
-            Console.WriteLine(_boatTypeNames[boat.Type]);
-            Console.WriteLine(boat.Length);
         }
     }
 }

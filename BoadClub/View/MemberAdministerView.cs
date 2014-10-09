@@ -10,7 +10,7 @@ namespace BoatClub.View
     class MemberAdministerView
     {
 
-        public void AdministerMember(Member member)
+        public void Administer(Member member)
         {
 
             string input;

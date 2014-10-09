@@ -53,7 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\BoatController.cs" />
+    <Compile Include="Controller\BoatAdministerController.cs" />
+    <Compile Include="Controller\BoatAdministerView.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\MemberAdministerController.cs" />
     <Compile Include="Controller\MemberController.cs" />

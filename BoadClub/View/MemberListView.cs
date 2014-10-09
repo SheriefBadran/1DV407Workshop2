@@ -43,12 +43,13 @@ namespace BoatClub.View
                 Console.WriteLine("Name: {0}", member.Name);
                 Console.WriteLine("Social security number: {0}", member.SocialSecurityNumber);
                 Console.WriteLine("Member number: {0}", member.MemberNumber);
-                Console.WriteLine();
 
                 foreach (var boat in member.Boats)
                 {
                     _boatView.Render(boat);
                 }
+
+                Console.WriteLine();
             }
         }
 

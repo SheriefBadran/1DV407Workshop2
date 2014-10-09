@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="BoatClub.Controller.BoatController">
+  <Class Name="BoatClub.Controller.BoatAdministerController">
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controller\BoatController.cs</FileName>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEAACAAAAABAAAAAAI=</HashCode>
+      <FileName>Controller\BoatAdministerController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoatClub.Controller.MainController">
@@ -17,7 +17,7 @@
   <Class Name="BoatClub.Controller.MemberController">
     <Position X="3.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAI=</HashCode>
+      <HashCode>AAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACAAI=</HashCode>
       <FileName>Controller\MemberController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,7 +32,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEA=</HashCode>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAEA=</HashCode>
       <FileName>Model\Repositories\MemberRepository.cs</FileName>
     </TypeIdentifier>
   </Class>

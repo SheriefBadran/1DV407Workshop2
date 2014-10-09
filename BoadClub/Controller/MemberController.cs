@@ -12,10 +12,15 @@ namespace BoatClub.Controller
 
         private MemberView _memberView;
         private MemberAdministerController _memberAdministerController;
-        public MemberController(MemberView memberView, MemberAdministerController memberAdministerController)
+        private BoatAdministerController _boatAdministerController;
+
+        public MemberController(MemberView memberView, 
+                                MemberAdministerController memberAdministerController,
+                                BoatAdministerController boatAdministerController)
         {
             _memberView = memberView;
             _memberAdministerController = memberAdministerController;
+            _boatAdministerController = boatAdministerController;
         }
 
         public void Run(Member member)
@@ -32,6 +37,9 @@ namespace BoatClub.Controller
                     case MemberView.MenuItem.Delete:
                         _memberAdministerController.Delete(member);
                         return;
+                    case MemberView.MenuItem.AddBoat:
+                        _boatAdministerController.Add(member);
+                        break;
                     case MemberView.MenuItem.Return:
                         return;
                     default:

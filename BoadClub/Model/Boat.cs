@@ -27,7 +27,7 @@ namespace BoatClub.Model
             : this()
         {
             Length = (double)boatJson.GetValue(length);
-            //Type = (BoatType)boatJson[type];
+            Type = (BoatType)(int)boatJson.GetValue(type);
         }
 
         public IDictionary ToJson()

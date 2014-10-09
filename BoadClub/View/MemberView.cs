@@ -1,4 +1,5 @@
 ﻿using BoatClub.Model;
+using BoatClub.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,20 @@ namespace BoatClub.Controller
 {
     class MemberView
     {
+
         public enum MenuItem
         {
             Edit,
             Delete,
+            AddBoat,
             Return
+        }
+
+        private BoatView _boatView;
+
+        public MemberView(BoatView boatView)
+        {
+            _boatView = boatView;
         }
 
         public void Render(Member member)
@@ -26,12 +36,13 @@ namespace BoatClub.Controller
 
             foreach (var boat in member.Boats)
             {
-                Console.WriteLine(boat);
+                _boatView.Render(boat);
             }
 
             Console.WriteLine();
             Console.WriteLine("Press E to edit member.");
             Console.WriteLine("Press D to delete member.");
+            Console.WriteLine("Press B to add a boat");
             Console.WriteLine("Press R to return.");
         }
 
@@ -52,6 +63,9 @@ namespace BoatClub.Controller
                     case "D":
                     case "d":
                         return MenuItem.Delete;
+                    case "B":
+                    case "b":
+                        return MenuItem.AddBoat;
                     case "R":
                     case "r":
                         return MenuItem.Return;

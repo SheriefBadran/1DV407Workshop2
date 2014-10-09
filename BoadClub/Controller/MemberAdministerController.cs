@@ -31,7 +31,7 @@ namespace BoatClub.Controller
             }
 
             var oldMember = (Member)member.Clone();
-            _memberAdministerView.AdministerMember(member);
+            _memberAdministerView.Administer(member);
 
             if (creating)
             {

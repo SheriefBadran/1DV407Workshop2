@@ -88,7 +88,9 @@ namespace BoatClub.Model
         public object Clone()
         {
 
-            return this.MemberwiseClone();
+            var member = (Member)MemberwiseClone();
+            member.Boats = Boats.ToList();
+            return member;
         }
     }
 }

@@ -27,6 +27,8 @@ namespace BoatClub
             builder.RegisterType<MainView>();
             builder.RegisterType<MemberAdministerView>();
             builder.RegisterType<MemberAdministerController>();
+            builder.RegisterType<BoatAdministerController>();
+            builder.RegisterType<BoatAdministerView>();
             var injector = builder.Build();
 
             var mainContoller = injector.Resolve<MainController>();
